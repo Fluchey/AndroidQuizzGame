@@ -8,4 +8,8 @@
     <string name="slash">/</string>
     <string name="next_question">Next Question</string>
     <string name="question">Question </string>
+    <string name="Easy">Easy</string>
+    <string name="Medium">Medium</string>
+    <string name="Hard">Hard</string>
+    <string name="start_game">Start game</string>
 </resources>

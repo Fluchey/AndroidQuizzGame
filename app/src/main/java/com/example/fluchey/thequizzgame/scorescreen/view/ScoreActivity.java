@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.fluchey.thequizzgame.R;
 import com.example.fluchey.thequizzgame.gamescreen.view.GameActivity;
+import com.example.fluchey.thequizzgame.startscreen.MainActivity;
 
 import org.w3c.dom.Text;
 
@@ -44,7 +45,7 @@ public class ScoreActivity extends AppCompatActivity implements ScoreView {
     }
 
     public void startNewGame(View view) {
-        Intent startNewGameIntent = new Intent(ScoreActivity.this, GameActivity.class);
+        Intent startNewGameIntent = new Intent(ScoreActivity.this, MainActivity.class);
         ScoreActivity.this.startActivity(startNewGameIntent);
     }
 }

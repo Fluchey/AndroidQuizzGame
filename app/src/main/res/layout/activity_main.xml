@@ -14,8 +14,8 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
             android:orientation="horizontal"></LinearLayout>
 
         <ImageView
@@ -27,14 +27,15 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="70dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="147dp"
                 android:layout_height="wrap_content"
                 android:text="Choose category"
-                android:textAlignment="viewEnd" />
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"/>
 
             <ListView
                 android:id="@+id/categoryListview"
@@ -44,20 +45,42 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="70dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="147dp"
                 android:layout_height="wrap_content"
                 android:text="Number of questions"
-                android:textAlignment="viewEnd" />
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"/>
 
-            <ListView
-                android:id="@+id/numberOfQuestionsListView"
-                android:layout_width="215dp"
-                android:layout_height="match_parent" />
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
 
         </LinearLayout>
 
@@ -70,12 +93,62 @@
                 android:layout_width="147dp"
                 android:layout_height="wrap_content"
                 android:text="Difficulty"
-                android:textAlignment="viewEnd" />
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"/>
 
             <RadioGroup
+                android:id="@+id/difficultyGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Easy" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Medium" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Hard" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCategoryChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvQuestionsChoosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvDifficultyChoosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <Button
@@ -84,14 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="startNewGame"
-            android:text="@string/new_game" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-
-        </LinearLayout>
+            android:text="@string/start_game" />
 
     </LinearLayout>
 </LinearLayout>

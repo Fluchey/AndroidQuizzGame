@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fluchey.thequizzgame.R;
 import com.example.fluchey.thequizzgame.gamescreen.presenter.GamePresenter;
@@ -55,11 +56,17 @@ public class GameActivity extends AppCompatActivity implements GameActivityInter
         newQuestionButton = (Button) findViewById(R.id.newQuestionButton);
         newQuestionButton.setEnabled(false);
 
-        gamePresenter.getNewGame("10", "", "easy");
+        Bundle bundle = getIntent().getExtras();
+        String numberOfQuestions = bundle.getString("numberOfQuestions");
+        String category = bundle.getString("category");
+        String difficulty = bundle.getString("difficulty").toLowerCase();
+        gamePresenter.getNewGame(numberOfQuestions, category, difficulty);
+
+        Toast.makeText(this, numberOfQuestions + " " + category + " " + difficulty, Toast.LENGTH_LONG).show();
 
         currentQuestionInt.setText("1");
         correctAnswersInt.setText("0");
-        totalQuestionsInt.setText("10");
+        totalQuestionsInt.setText(String.valueOf(numberOfQuestions));
     }
 
 

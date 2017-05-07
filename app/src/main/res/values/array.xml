@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="difficulty">
-        <item>Easy</item>
-        <item>Medium</item>
-        <item>Hard</item>
+    <string-array name="categories">
+        <item>Any category</item>
+        <item>General knowledge</item>
+        <item>Entertainment: Books</item>
+        <item>Entertainment: Film</item>
+        <item>Entertainment: Music</item>
+        <item>Entertainment: Musicals and Theatre</item>
+        <item>Entertainment: Television</item>
+        <item>Entertainment: Video Games</item>
+        <item>Entertainment: Bord games</item>
+        <item>Science and nature</item>
+        <item>Science: Computers</item>
+        <item>Science: Mathematics</item>
+        <item>Mythology</item>
+        <item>Sports</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Politics</item>
+        <item>Art</item>
+        <item>Celebrities</item>
+        <item>Animals</item>
+        <item>Vehicles</item>
+        <item>Entertainment: Comics</item>
+        <item>Science: Gadgets</item>
+        <item>Entertainment: Japanese anime and manga</item>
+        <item>Entertainment: Cartoon and animations</item>
     </string-array>
 </resources>

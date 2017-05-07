@@ -35,12 +35,14 @@ public class Connector {
 
     private static String makeUrl(String questionAmount, String category, String difficulty){
         String url = "";
-        if (category == ""){
+        if (category.equals("8")){
             url = "https://opentdb.com/api.php?amount=" + questionAmount + "&difficulty=" + difficulty
                     + "&encode=url3986";
+            Log.d("url", url);
         }else {
             url = "https://opentdb.com/api.php?amount=" + questionAmount + "&category=" + category + "&difficulty=" + difficulty
                     + "&encode=url3986";
+            Log.d("url", url);
         }
         return url;
     }
