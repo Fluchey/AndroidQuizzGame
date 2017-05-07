@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TheQuizzGame</string>
+    <string name="new_game">New Game</string>
+    <string name="highscore">Highscore</string>
+    <string name="ok">Ok</string>
+    <string name="new_question">New Question</string>
+    <string name="category">Category:</string>
+    <string name="slash">/</string>
+    <string name="next_question">Next Question</string>
+    <string name="question">Question </string>
+</resources>
