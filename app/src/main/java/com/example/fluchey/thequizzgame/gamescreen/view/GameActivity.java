@@ -51,7 +51,9 @@ public class GameActivity extends AppCompatActivity implements GameActivityInter
         listView.setOnItemClickListener(this);
 
         okButton = (Button) findViewById(R.id.okButton);
+        okButton.setEnabled(false);
         newQuestionButton = (Button) findViewById(R.id.newQuestionButton);
+        newQuestionButton.setEnabled(false);
 
         gamePresenter.getNewGame("10", "", "easy");
 
@@ -79,14 +81,14 @@ public class GameActivity extends AppCompatActivity implements GameActivityInter
 
     @Override
     public void showCorrectAnswer(int correctId) {
-        listView.getChildAt(correctId).setBackgroundColor(Color.GREEN);
+        listView.getChildAt(correctId).setBackgroundResource(R.color.correctAnswerColor);
         listView.setEnabled(false);
     }
 
     @Override
     public void showFalseAnswer(int wrongAnswer, int correctAnswer) {
-        listView.getChildAt(wrongAnswer).setBackgroundColor(Color.RED);
-        listView.getChildAt(correctAnswer).setBackgroundColor(Color.GREEN);
+        listView.getChildAt(wrongAnswer).setBackgroundResource(R.color.wrongAnswerColor);
+        listView.getChildAt(correctAnswer).setBackgroundResource(R.color.correctAnswerColor);
         listView.setEnabled(false);
     }
 
@@ -116,10 +118,11 @@ public class GameActivity extends AppCompatActivity implements GameActivityInter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         chosenAnswer = (int) id;
+        okButton.setEnabled(true);
     }
 
     public void showNewQuestion(View view) {
-        okButton.setEnabled(true);
+        newQuestionButton.setEnabled(false);
         gamePresenter.getNewQuestion();
         listView.setEnabled(true);
 
@@ -130,6 +133,7 @@ public class GameActivity extends AppCompatActivity implements GameActivityInter
 
     public void checkAnswer(View view) {
         okButton.setEnabled(false);
+        newQuestionButton.setEnabled(true);
         gamePresenter.checkCorrectAnswer(chosenAnswer);
     }
 }
